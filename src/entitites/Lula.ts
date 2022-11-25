@@ -19,7 +19,7 @@ export class Lula extends Character {
       name: "Lula",
       stats,
       attackBox: {
-        offset: { x: -50, y: 20 },
+        offset: { x: -175, y: 20 },
       },
       effects: {
         scale: 2.5,
@@ -27,18 +27,18 @@ export class Lula extends Character {
       frames: {
         max: 4,
       },
-      imageSrc: "/assets/chars/kenji/Idle.png",
+      imageSrc: "/assets/chars/lula/Idle.png",
       sprites: {
         idle: {
-          imageSrc: "/assets/chars/kenji/Idle.png",
+          imageSrc: "/assets/chars/lula/Idle.png",
           framesMax: 4
         },
         attack: {
-          imageSrc: "/assets/chars/kenji/Attack1.png",
+          imageSrc: "/assets/chars/lula/Attack1.png",
           framesMax: 4
         },
         run: {
-          imageSrc: "/assets/chars/kenji/Run.png",
+          imageSrc: "/assets/chars/lula/Run.png",
           framesMax: 8
         },
       }
@@ -46,7 +46,7 @@ export class Lula extends Character {
   }
 
   attack(target: Character) {
-    if (Utils.rectangularCollision(this, target)) {
+    if (Utils.rectangularCollision(target, this)) {
       target.receiveAttack(this.battleStats.physicalDamage);
     }
     this._drawAttack();

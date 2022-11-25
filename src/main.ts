@@ -4,13 +4,13 @@ import "../public/styles/global.css";
 import { SpriteBase } from "./entitites/base/SpriteBase";
 import { Bolsonaro } from './entitites/Bolsonaro';
 import { Lula } from './entitites/Lula';
-import { decreaseTimer, determineWinner } from './ui';
+import { decreaseTimer, determineWinner, timer } from './ui';
 
 window.canvas = document.querySelector("canvas");
 window.canvasContext = canvas?.getContext("2d");
 window.gravity = 1.5;
 
-window.__DEV__ = true;
+window.__DEV__ = false;
 
 window.UI = document.querySelectorAll(".ui");
 
@@ -80,30 +80,30 @@ canvasContext?.fillRect(0, 0, canvas!.width, canvas!.height);
 const stageBackground = new SpriteBase({
   initialPosition: {
     x: 0,
-    y: 0,
+    y: -210,
   },
   dimensions: {
     width: canvas!.width,
     height: canvas!.height,
   },
   effects: {
-    scale: 2.6,
+    scale: 1.8,
   },
-  imageSrc: "/assets/stages/stage.png",
+  imageSrc: "/assets/stages/planalto.png",
 });
 
 const bolsonaro = new Bolsonaro({
   player: "FIRST",
-  initialPosition: {x: 20, y: 20},
+  initialPosition: {x: canvas!.width / 2 - 200, y: 300},
   offset: {
-    x: 215,
-    y: 157,
+    x: 220,
+    y: 143,
   },
 })
 
 const lula = new Lula({
   player: "SECOND",
-  initialPosition: { x: 400, y: 100 },
+  initialPosition: { x: canvas!.width / 2 + 200, y: 300 },
   offset: {
     x: 215,
     y: 157,
@@ -114,7 +114,7 @@ const lula = new Lula({
 
 function animate() {
   // CONFIGURE ANIMATION LOOP
-  window.requestAnimationFrame(animate);
+  const animationId = window.requestAnimationFrame(animate);
   canvasContext!.fillStyle = "white";
   canvasContext!.fillRect(0, 0, canvas!.width, canvas!.height);
   
@@ -132,8 +132,9 @@ function animate() {
   }
 
   // end game based on health
-  if (bolsonaro.battleStats.actualHp <= 0 || lula.battleStats.actualHp <= 0) {
+  if (bolsonaro.battleStats.actualHp <= 0 || lula.battleStats.actualHp <= 0 || timer === 0) {
     determineWinner(lula, bolsonaro)
+    window.cancelAnimationFrame(animationId);
   }
 }
 

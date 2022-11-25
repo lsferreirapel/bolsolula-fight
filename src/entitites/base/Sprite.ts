@@ -31,8 +31,8 @@ export class Sprite extends SpriteBase {
     this._attackBox = {
       position: { ...this._position },
       offset: attackBox.offset,
-      height: 50,
-      width: 100,
+      height: 100,
+      width: 200,
     };
     this._sprites = sprites;
 
@@ -233,7 +233,7 @@ export class Sprite extends SpriteBase {
 
     if (
       this._position.y + this._dimensions.height + this._velocity.y >=
-      canvas!.height - 50
+      canvas!.height - 20
     ) {
       this._velocity.y = 0;
     } else {

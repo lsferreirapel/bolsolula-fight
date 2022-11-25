@@ -31,18 +31,18 @@ export class Bolsonaro extends Character {
       frames: {
         max: 8,
       },
-      imageSrc: "/assets/chars/samuraiMack/Idle.png",
+      imageSrc: "/assets/chars/bolsonaro/Idle.png",
       sprites: {
         idle: {
-          imageSrc: "/assets/chars/samuraiMack/Idle.png",
+          imageSrc: "/assets/chars/bolsonaro/Idle.png",
           framesMax: 8
         },
         attack: {
-          imageSrc: "/assets/chars/samuraiMack/Attack1.png",
-          framesMax: 6
+          imageSrc: "/assets/chars/bolsonaro/Attack1.png",
+          framesMax: 3
         },
         run: {
-          imageSrc: "/assets/chars/samuraiMack/Run.png",
+          imageSrc: "/assets/chars/bolsonaro/Run.png",
           framesMax: 8
         },
       }
