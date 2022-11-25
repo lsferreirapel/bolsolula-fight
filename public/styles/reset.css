@@ -3,12 +3,12 @@
    License: none (public domain)
 */
 
-/* @font-face {
-  font-family: "Pokemon Font";
-  src: url(../fonts/pokemon_fire_red.woff);
-  src: url(../fonts/pokemon_fire_red.woff) format("woff"),
-    url(../fonts/pokemon_fire_red.ttf) format("truetype");
-} */
+ @font-face {
+  font-family: "Act of Rejection";
+  src: url(../fonts/Act_Of_Rejection.ttf);
+  src: url(../fonts/Act_Of_Rejection.woff) format("woff"),
+    url(../fonts/Act_Of_Rejection.ttf) format("truetype");
+} 
 
 * {
   --white-color: #f8f8f8;
@@ -110,7 +110,7 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font-family: "Pokemon Font";
+  font-family: "Act of Rejection";
   font: inherit;
   vertical-align: baseline;
 }

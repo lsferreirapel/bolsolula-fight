@@ -1,16 +1,16 @@
 body {
   background-color: black;
-  /* font-family: "Pokemon Font"; */
+  font-family: "Act of Rejection";
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
 }
 h1 {
-  /* font-family: "Pokemon Font"; */
-  font-size: 35px;
+  font-family: "Act of Rejection";
+  font-size: 50px;
   text-transform: uppercase;
-  color: var(--gray-dark-color);
+  color: red;
   text-shadow: 2px 2px 0px var(--gray-color);
 }
 
@@ -28,6 +28,13 @@ h1 {
 #app {
   display: inline-block;
   position: relative;
+}
+
+#displayText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .health-bar-container {
