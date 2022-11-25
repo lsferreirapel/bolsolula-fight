@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOLSOLULA FIGHT</title>
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link rel="stylesheet" href="/styles/global.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="health-bar-container">
+        <!-- Player HP -->
+        <div class="player-health-bar">
+          <div id="FIRST-HP" class="player-hp"></div>
+          <h2 class="player-label">Lula</h2>
+        </div>
+        <!-- TIMER -->
+        <div class="timer">99</div>
+        <!-- Enemy HP -->
+        <div class="enemy-health-bar">
+          <div id="SECOND-HP" class="enemy-hp"></div>
+          <h2 class="enemy-label">Bolsonaro</h2>
+        </div>
+      </div>
+      <h1 id="displayText"></h1>
+      <canvas></canvas>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+body {
+  background-color: black;
+  /* font-family: "Pokemon Font"; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+h1 {
+  /* font-family: "Pokemon Font"; */
+  font-size: 35px;
+  text-transform: uppercase;
+  color: var(--gray-dark-color);
+  text-shadow: 2px 2px 0px var(--gray-color);
+}
+
+/* button {
+  position: relative;
+  border: 0;
+  font-family: "Pokemon Font";
+  font-size: 35px;
+  text-transform: uppercase;
+  color: var(--gray-dark-color);
+  background-color: var(--white-color);
+  text-shadow: 2px 2px 0px var(--gray-color);
+} */
+
+#app {
+  display: inline-block;
+  position: relative;
+}
+
+.health-bar-container {
+  position: absolute;
+  display: flex;
+  width: 90%;
+  margin: 20px 5%;
+}
+.player-health-bar, .enemy-health-bar {
+  position: relative;
+  flex: 1;
+  height: 35px;
+  -webkit-box-shadow: inset 1px 1px 10px 1px rgba(135,11,11,1);
+  -moz-box-shadow: inset 1px 1px 10px 1px rgba(135,11,11,1);
+  box-shadow: inset 1px 1px 10px 1px rgba(135,11,11,1);
+  background-color: #D10A0B;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+.player-health-bar {
+  border-right: none;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.enemy-health-bar {
+  border-left: none;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.player-hp, .enemy-hp {
+  position: absolute;
+  background-color:#F1D803;
+  top: 0;
+  bottom: 0;
+}
+.player-hp {
+  width: 100%;
+  right: 0
+}
+.enemy-hp {
+  width: 100%;
+  left: 0
+}
+
+.player-label, .enemy-label {
+  position: absolute;
+  bottom: -20px;
+}
+.enemy-label {
+  right: 0;
+}
+
+.timer {
+  font-size: 35px;
+  align-items: center;
+  height: 35px;
+  background-color:#D10A0B;
+  border: 1px solid #D10A0B;
+  color: white;
+}
+
